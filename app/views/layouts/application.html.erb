@@ -17,6 +17,7 @@
       <%= yield %>
       <%= render 'layouts/footer' %>
       <%= debug(params) if Rails.env.development? %>
+      <%= debug("logged_in? && current_user.id: #{logged_in? && current_user[:id]}") if Rails.env.development? %>
     </div>
   </body>
 </html>
